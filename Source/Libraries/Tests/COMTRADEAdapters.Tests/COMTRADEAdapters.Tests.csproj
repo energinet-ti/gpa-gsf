@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <RootNamespace>COMTRADEAdapters.Tests</RootNamespace>
+    <AssemblyName>COMTRADEAdapters.Tests</AssemblyName>
+    <IsPackable>false</IsPackable>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="3.1.1" />
+    <PackageReference Include="MSTest.TestFramework" Version="3.1.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Adapters\COMTRADEAdapters\COMTRADEAdapters.csproj" />
+    <ProjectReference Include="..\..\GSF.COMTRADE\GSF.COMTRADE.csproj" />
+    <ProjectReference Include="..\..\GSF.Core\GSF.Core.csproj" />
+    <ProjectReference Include="..\..\GSF.TimeSeries\GSF.TimeSeries.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BadValueFilteringTests.cs" />
+    <Compile Include="ComtradeTestDataHelper.cs" />
+    <Compile Include="DirectoryWatchTests.cs" />
+    <Compile Include="FileImporterTests.cs" />
+    <Compile Include="FindDatFileTests.cs" />
+    <Compile Include="GetShortStatusTests.cs" />
+    <Compile Include="MeasurementMappingTests.cs" />
+    <Compile Include="ReplaySafetyTests.cs" />
+    <Compile Include="TimestampCompatibilityTests.cs" />
+    <Compile Include="WatchReadinessAndCleanupTests.cs" />
+  </ItemGroup>
+</Project>
