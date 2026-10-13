@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="3.1.1" />
+    <PackageReference Include="MSTest.TestFramework" Version="3.1.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Extensions" />
+  </ItemGroup>
+  <PropertyGroup>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Adapters\EventHubOutputAdapter\EventHubOutputAdapter.csproj" />
+    <ProjectReference Include="..\..\GSF.Core\GSF.Core.csproj" />
+    <ProjectReference Include="..\..\GSF.TimeSeries\GSF.TimeSeries.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdapterCompatibilityTests.cs" />
+    <Compile Include="AdapterLifecycleTests.cs" />
+    <Compile Include="BuildBatchBodyTests.cs" />
+    <Compile Include="BuildJsonTests.cs" />
+    <Compile Include="EventHubHttpClientTests.cs" />
+    <Compile Include="IsTransientTests.cs" />
+    <Compile Include="LazyResolutionTests.cs" />
+    <Compile Include="SignalNameDerivationTests.cs" />
+    <Compile Include="SourceFilterTests.cs" />
+    <Compile Include="TestHttpServer.cs" />
+    <Compile Include="WriteAheadLogTests.cs" />
+  </ItemGroup>
+</Project>
